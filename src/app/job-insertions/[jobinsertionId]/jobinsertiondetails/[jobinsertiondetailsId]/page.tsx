@@ -1,5 +1,10 @@
 import { notFound } from "next/navigation";
 
+export const metadata = {
+    title: `Job's Insertions details`,
+    description: `Job's Insertions details`,
+}
+
 type JobInsertionDetailsPageProps = {
     params: {
         jobinsertionId: string;
