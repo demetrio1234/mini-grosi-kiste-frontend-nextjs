@@ -1,10 +1,20 @@
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next'
 
 type JobInsertionProps = {
     params: {
         jobinsertionId: string;
+        title: string;
+        description: string;
     };
 };
+
+export const generateMetadata = ({ params }: JobInsertionProps): Metadata => {
+    return {
+        title: `Job's Insertions details #${params.jobinsertionId}`,
+        description: `Job's Insertions details #${params.jobinsertionId}`,
+    }
+}
 
 export default function JobInsertionDetailsPage({ params: { jobinsertionId } }: JobInsertionProps) {
 
