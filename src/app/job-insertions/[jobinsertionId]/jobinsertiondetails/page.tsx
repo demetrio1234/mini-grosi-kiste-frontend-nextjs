@@ -9,10 +9,15 @@ type JobInsertionProps = {
     };
 };
 
-export const generateMetadata = ({ params }: JobInsertionProps): Metadata => {
+export const generateMetadataAsync = async ({ params }: JobInsertionProps): Promise<Metadata> => {
+    const title = await new Promise(resolve => {
+        setTimeout(() => {
+            resolve(`Job's Insertions details #${params.jobinsertionId}`)
+        }, 100)
+    })
     return {
-        title: `Job's Insertions details #${params.jobinsertionId}`,
-        description: `Job's Insertions details #${params.jobinsertionId}`,
+        title: `Job's Insertions details #${title}`,
+        description: `Job's Insertions details #${title}`,
     }
 }
 
