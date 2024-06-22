@@ -18,6 +18,10 @@ const Form: React.FC<FormProps> = ({ className }) => {
     console.log("DEBUG: Form submitted");
   };
 
+  const [input, setInput] = useState("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
 
   return (
     <form className="flex flex-col items-center px-0 py-5 gap-5 text-center
@@ -27,7 +31,10 @@ const Form: React.FC<FormProps> = ({ className }) => {
 
       <div className="relative flex flex-col items-center">
         <input type="text" id="floating_input_outlined_name"
-          className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-3 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+          className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-3 border-black appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+          onChange={(e) => setInput(e.target.value)}
+        />
         <label htmlFor="floating_input_outlined_name"
           className="
             absolute text-sm

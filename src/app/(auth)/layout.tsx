@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -13,6 +14,8 @@ const navLinks = [
 ]
 
 export default function RootLayout({ children, }: { children: React.ReactNode, }) {
+
+    const [input, setInput] = useState('');
 
     const pathname = usePathname();
     let isActive: boolean = false;
@@ -42,6 +45,8 @@ export default function RootLayout({ children, }: { children: React.ReactNode, }
                 </nav>
             </div>
             {children}
+            <label htmlFor="forgotten-password-email">{"Type here your email"}</label>
+            <input type="text" name="forgotten-password-email" onChange={(e) => setInput(e.target.value)} />
         </>
     )
 }
