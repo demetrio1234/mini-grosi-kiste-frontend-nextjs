@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "../styles.css";
 
 export default function RootLayout(
@@ -8,7 +9,10 @@ export default function RootLayout(
             topfiftyusersscore: React.ReactNode,
             tophundredusersscore: React.ReactNode
         }) {
-    return (
+
+    const isLogged = false;
+
+    return isLogged ? (
         <div>
             <div>{children}</div>
             <div className="flex">
@@ -20,5 +24,11 @@ export default function RootLayout(
                 </div>
             </div>
         </div>
-    )
+    ) :
+        (
+            <>
+                <div className="flex">
+                    <Link href="/login">Youre not yet logged, please click here to access this area</Link>
+                </div>
+            </>)
 }
