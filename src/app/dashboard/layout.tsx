@@ -14,7 +14,6 @@ export default function RootLayout(
             <div className="flex">
                 <div className="flex-col bg-slate-200 p-10 rounded-xl">
                     <div className="bg-slate-300 p-5 rounded-xl">{topfiftyusersscore}</div>
-                    <div className="bg-slate-300 p-5 rounded-xl">{tophundredusersscore}</div>
                 </div>
                 <div className="flex-col bg-slate-300 p-10 rounded-xl">
                     <div className="bg-slate-200 p-5 rounded-xl">{toptenusersscore}</div>

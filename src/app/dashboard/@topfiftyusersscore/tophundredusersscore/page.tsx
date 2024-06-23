@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import Link from "next/link"
 
-export default function TopFiftyUsersScorePage() {
+export default function TopHundredUsersScorePage() {
     return (
         <div>
-            <h1>Top 50 Users</h1>
-            <Link href="/dashboard/tophundredusersscore">{"click here for the 100 user's list"}</Link>
+            <h1>Top 100 Users</h1>
+            <Link href="/dashboard">{"click here for the 50 user's list"}</Link> {/* topfiftyusersscore */}
             <ol>
                 <li>John Doe</li>
                 <li>Jane Doe</li>
@@ -60,6 +60,7 @@ export default function TopFiftyUsersScorePage() {
                 <li>Jane Marble</li>
                 <li>John Limestone</li>
                 <li>Jane Limestone</li>
+                <li>John Sandstone</li>
             </ol>
         </div>
     )
