@@ -1,3 +1,5 @@
+import "../styles.css";
+
 export default function RootLayout(
     { children, toptenusersscore, topfiftyusersscore, tophundredusersscore }:
         {
@@ -9,12 +11,14 @@ export default function RootLayout(
     return (
         <div>
             <div>{children}</div>
-            <div style={{ display: "flex" }}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                    <div>{topfiftyusersscore}</div>
-                    <div>{tophundredusersscore}</div>
+            <div className="flex">
+                <div className="flex-col bg-slate-200 p-10 rounded-xl">
+                    <div className="bg-slate-300 p-5 rounded-xl">{topfiftyusersscore}</div>
+                    <div className="bg-slate-300 p-5 rounded-xl">{tophundredusersscore}</div>
                 </div>
-                <div style={{ display: "flex", flex: 1 }}>{toptenusersscore}</div>
+                <div className="flex-col bg-slate-300 p-10 rounded-xl">
+                    <div className="bg-slate-200 p-5 rounded-xl">{toptenusersscore}</div>
+                </div>
             </div>
         </div>
     )
