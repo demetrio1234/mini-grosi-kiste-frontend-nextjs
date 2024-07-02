@@ -12,7 +12,9 @@ const config: Config = {
         'custom-bg': 'rgba(60, 216, 216, 0.307)',
       },
       gridTemplateColumns: {
-        'custom-cols': '15vw 70vw 15vw',
+        'custom-side-cols': '15%',
+        'custom-cols': '15% 70% 15%',
+        'custome-main-col': '70%',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
