@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'custom-bg': 'rgba(60, 216, 216, 0.307)',
+      },
+      gridTemplateColumns: {
+        'custom-cols': '15vw 70vw 15vw',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
